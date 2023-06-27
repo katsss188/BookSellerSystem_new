@@ -15,3 +15,6 @@
 - maven 版本： Maven 3.6.3
 - java版本：17
 
+## 注
+- 并非所有部分都是我所写，后期将仅保留自己所写的部分，完整部分请见[here](https://github.com/katsss188/BookSellerSystem)
+
