@@ -12,6 +12,6 @@
 
 ## 使用
 
-maven 版本： Maven 3.6.3
-java版本：17
+- maven 版本： Maven 3.6.3
+- java版本：17
 
