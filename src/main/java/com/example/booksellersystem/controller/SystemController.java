@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+//一些系统功能部分
 @RestController
 @RequestMapping({"/user", "/manager"})
 public class SystemController {

@@ -22,7 +22,7 @@ public class FlushHot {
   //  每天的0点、13点、18点、21点都执行一次：  @Scheduled(cron = " 0 0 0,13,18,21 * * ?")
 
     //每***更新一次热度
-    //@Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "0 0 1 * * ?")
     public void flushHot(){
         systemMapper.flushHot();
     }

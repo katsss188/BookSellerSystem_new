@@ -39,9 +39,9 @@ public class SuppliersServiceA implements SuppliersService {
 
     @Override
     public int SuppliersDelete(List<String> ID) {
-        for(String i : ID){
-            suppliersMapper.delete(i);
-        }
+        ID.stream().forEach((id) ->
+                suppliersMapper.delete(id)
+        );
 
         return 1;
     }

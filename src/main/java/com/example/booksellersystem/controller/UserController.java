@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//用户部分的功能都在这了
 @RestController
 @RequestMapping("/user")
 public class UserController {

@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.util.UUID;
-
+//这个啥也不是，直接删掉
 @RestController
 public class UploadController {
     @RequestMapping("/upload")

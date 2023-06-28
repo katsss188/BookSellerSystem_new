@@ -17,6 +17,9 @@ import java.net.http.HttpRequest;
 import java.time.LocalDateTime;
 
 /*预留部分*/
+/*
+* 此处实现了记录用户操作
+* 可直接删*/
 @Aspect
 @Component
 @Slf4j
@@ -29,6 +32,7 @@ public class MyAspect {
 
    /* @Before("execution(public * com.example.booksellersystem.cont" +
             "roller..*(..))")*/
+
     @After("@annotation(com.example.booksellersystem.util.MyLog)")
     public void after(JoinPoint joinPoint){
 

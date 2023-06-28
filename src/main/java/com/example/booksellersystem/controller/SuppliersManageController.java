@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,13 +23,14 @@ public class SuppliersManageController {
     @RequestMapping("/add")
     public Result SuppliersAdd(@RequestBody Suppliers add_Suppliers){
         String mes;
-        if(suppliersService.SuppliersAdd(add_Suppliers)==1){
+        int jud = suppliersService.SuppliersAdd(add_Suppliers);
+        if(jud == 1){
             mes = "add success!";
         }
         else{
             mes = "name has survived,add failed!";
         }
-        return new Result(suppliersService.SuppliersAdd(add_Suppliers),mes,null);
+        return new Result(jud,mes,null);
     }
 
     @RequestMapping("/search")
@@ -45,8 +47,9 @@ public class SuppliersManageController {
     }
 
     @RequestMapping("/delete")
-    public Result SuppliersDelete(@RequestBody List<String> ID){
-        suppliersService.SuppliersDelete(ID);
+    public Result SuppliersDelete(@RequestBody HashMap<String,Object> param){
+        List<String> suppliers = (List<String>) param.get("suppliers");
+        suppliersService.SuppliersDelete(suppliers);
         return Result.success();
     }
 

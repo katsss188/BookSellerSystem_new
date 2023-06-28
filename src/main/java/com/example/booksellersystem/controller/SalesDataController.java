@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+
 @RequestMapping("/manager/salesdata")
 @RestController
 public class SalesDataController {
@@ -23,10 +25,11 @@ public class SalesDataController {
     public Result CountSalesDataSearchBook(){
         return Result.success(salesDataService.CountSalesDataSearchBook());
     }
-   /* @RequestMapping("/OneBook")
-    public Result SalesDataSearchOneBook(@RequestBody String BookName){
+   @RequestMapping("/OneBook")
+    public Result SalesDataSearchOneBook(@RequestBody HashMap<String,Object> param){
+       String BookName = (String) param.get("BookName");
         return Result.success(salesDataService.SalesDataSearchOneBook(BookName));
-    }*/
+    }
 
 
     //按照日期的销售记录
