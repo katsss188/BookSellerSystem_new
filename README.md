@@ -6,7 +6,11 @@
 
 技术：SpingBoot + Mybatis
 
-这是合肥工业大学2023《数据库系统课程设计》项目的后端部分。前端部分在[这里](https://github.com/Eslzzyl/booksale-frontend)。
+这是合肥工业大学2023《数据库系统课程设计》项目的后端用户和系统部分。
+
+前端部分点[here](https://github.com/Eslzzyl/booksale-frontend)。
+
+完整后端部分点[here](https://github.com/katsss188/BookSellerSystem.git)
 
 仓促所写，后期各种改接口，可读性一般。
 
